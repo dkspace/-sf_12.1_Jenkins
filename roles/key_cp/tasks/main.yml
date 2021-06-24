@@ -1,0 +1,22 @@
+---
+# tasks file for key_cp
+- name: Copy private authorized key taken from file
+  copy: 
+    src: files/id_rsa
+    dest: /home/{{new_user}}/.ssh/id_rsa
+    owner: "{{new_user}}"
+    group: "{{new_user}}"
+    mode: '0600'
+- name: Copy pub authorized key taken from file
+  copy: 
+    src: files/id_rsa.pub
+    dest: /home/{{new_user}}/.ssh/id_rsa.pub
+    owner: "{{new_user}}"
+    group: "{{new_user}}"
+    mode: '0644'
+#- name: Tell the host about our servers it might want to ssh to
+#  known_hosts:
+#    path: home/{{new_user}}/.ssh/known_hosts
+#    name: var=hostvars[production]ansible_host
+#    key: "{{ lookup('file', 'files/id_rsa.pub') }}"
+    

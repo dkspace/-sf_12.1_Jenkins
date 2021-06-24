@@ -1,0 +1,6 @@
+---
+# vars file for users_key
+new_user: 'Jenkins'
+usr_pass: '1qaz@WSX'
+#    - pub_key: 'ssh-rsa AAAABxxxxxxxxxxxxxxxxxxxxxxxxxxxx dmik@dkhost'
+

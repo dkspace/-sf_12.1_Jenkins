@@ -1,0 +1,21 @@
+---
+- hosts: jenkins
+  gather_facts: no
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - users_key
+  - key_cp
+  - ansible-jenkins
+  - docker
+- hosts: stating, production
+  gather_facts: no
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+  - users_key
+  - auth_key_add
+  - docker
+  

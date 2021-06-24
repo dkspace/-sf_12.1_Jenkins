@@ -1,0 +1,32 @@
+---
+# tasks file for docker
+
+- name: Get Docker repo for ansible
+  get_url:
+    url: https://download.docker.com/linux/centos/docker-ce.repo
+    dest: /etc/yum.repos.d/docker.repo
+
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install Docker
+  yum: 
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - mc
+    state: latest
+
+- name: Start Docker, in all cases
+  service:
+    name: docker
+    state: started
+
+- name: Add the user 'Jenkins' , appending the group 'docker'
+  user:
+    name: Jenkins
+    groups: docker
+    append: yes

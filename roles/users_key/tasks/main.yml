@@ -1,0 +1,15 @@
+---
+# tasks file for users_key
+- name: add new user
+  user:
+    name: "{{new_user}}"
+    shell: /bin/bash
+    password: "{{usr_pass}}"
+    generate_ssh_key: yes
+    ssh_key_bits: 2048
+    ssh_key_file: .ssh/id_rsa
+- name: Add a pub authorized key taken from file
+  authorized_key:
+    user: "{{new_user}}"
+    state: present
+    key: "{{ lookup('file', '/home/dmik/.ssh/id_rsa.pub') }}"

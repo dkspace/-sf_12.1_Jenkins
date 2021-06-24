@@ -1,0 +1,31 @@
+---
+
+# Ansible role to install jenkins
+
+  # Include repo file
+  - include: repo.redhat.yml
+
+  - name: upgrade all packages
+    yum:
+      name: '*'
+      state: latest
+
+  - name: Install Jenkins
+    yum: 
+      name:
+        - jenkins
+        - java-11-openjdk-devel
+      state: latest
+    register: jenkins_install
+
+  - name: Reload systemd
+    command: systemctl daemon-reload
+
+  - name: Start jenkins, in all cases
+    service:
+      name: jenkins
+      state: started
+
+  # Configure jenkins
+#  - include: config.yml
+ 

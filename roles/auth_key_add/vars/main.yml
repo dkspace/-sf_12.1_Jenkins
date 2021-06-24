@@ -1,0 +1,4 @@
+---
+# vars file for auth_key_add
+pub_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCXP5bqd+TB8NuCHxS2Hh6SA0NJ66c+c3DgSZAPqJKeOxEbfoyMLIVKaEatLyfuLI2r8/jkSQhaibMOZ65aPySV4Gk46fCcXe5tsRbgXMY7bwOwbflDdOfe7s22mP3T74RF8vXm6oEbrjP/jazpTSIwBrwleHjf3ux3zYYAxVOtaqCspIGbZ0F514xdiDeRlthzivF7XeYPlks7W+pT1ylnxWpd8nFQaD6FfN1DWXPCTRuUNXCsrQPmCkG+6PR+mpNwX8IAAduPOvAtD3OcMtf7b+2ATJpNfBWt8IglulehlhED7T88xDVzMfl6urN3Q/l3/ycA+hpcdBXn+jQEnilr Jenkins@dJenkins'
+new_user: 'Jenkins'

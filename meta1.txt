@@ -1,0 +1,8 @@
+#cloud-config
+users:
+  - name: dmik
+    groups: sudo
+    shell: /bin/bash
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCok70OztMXnrsvM42uinLQ6N4ZmdvsXuaWKiZJgl3+Ak7Y/2zf5mVbKHdr8q/+G+UdxhowgxahMsKOJmjtmvoUfXKXN2X4E0TY1GGFX4JegAszOLBJ4RploeFz30+kbkO+xDP/sT2AqUv6zNDrYy78UzQPWnurifF3y6aZ5TZRXcwwlfemJA8d3pA+ZnXL3lQBJWOa8dQl+uR5qndtTlOSofsnNdMB1AKmj/uwsTvTU8yUwvyLBN/U2bvjMRMUD6x/IAV4nz6lscnEE5BFUG/wKdYgP3xiTxfTE76Ar6HOpa3qq/cLUS5GW+jhMleLpGb7Y67F29Ugib+nFW5w9sZP dmik@production

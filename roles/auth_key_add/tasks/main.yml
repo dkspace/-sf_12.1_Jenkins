@@ -1,0 +1,7 @@
+---
+# tasks file for auth_key_add
+- name: Add a pub authorized key taken from file
+  authorized_key:
+    user: "{{new_user}}"
+    state: present
+    key: "{{ lookup('file', 'files/id_rsa.pub') }}"
