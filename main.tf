@@ -7,9 +7,9 @@ terraform {
 }
 
 provider "yandex" {
-  token     = "AQAAAAAVYfbHAATuwVtkYVYIQUxyg2YcpEzFYUY"
-  cloud_id  = "b1gna86k5nfpb693gn8u"
-  folder_id = "b1gah9daaqvrbcism5fa"
+  token     = "xxxxxxxxxxxxxxxx"
+  cloud_id  = "xxxxxxxxxxxxxxxxx"
+  folder_id = "xxxxxxxxxxxxxxxxx"
   zone      = "ru-central1-a"
 }
 
@@ -136,7 +136,7 @@ resource "local_file" "AnsibleInventory" {
   )
   filename = "${path.module}/inventory.yml"
 }
-### The Ansible Jenkins User ADD
+### The Ansible role play
 resource "null_resource" "ansible" {
   provisioner "local-exec" {
     command = "sleep 120; ansible-playbook -i ${path.module}/inventory.yml Role_playlist.yml"
