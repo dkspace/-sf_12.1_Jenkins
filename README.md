@@ -104,7 +104,7 @@ pipeline {
             }
             steps {
                     sh """
-                    ssh jenkins@178.154.203.182 reboot now
+                    ssh root@178.154.203.182 reboot now
                     """
             }
         }
@@ -116,8 +116,8 @@ pipeline {
             }
             steps {
                     sh """
-                    ssh jenkins@178.154.203.182 reboot now
-                    ssh jenkins@178.154.207.107 reboot now
+                    ssh root@178.154.203.182 reboot now
+                    ssh root@178.154.207.107 reboot now
                     """
             }
         }
