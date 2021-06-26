@@ -11,14 +11,14 @@ This is an exercise from sevf education as part of cource in [SkillFactory.ru - 
 #### 1.to launch docker with Wordpress via Jenkins Job (shell) on production Node
 
 
-  ssh jenkins@178.154.207.107 docker run -d -p 80:80 tutum/wordpress /run.sh
+    ssh jenkins@178.154.207.107 docker run -d -p 80:80 tutum/wordpress /run.sh
 
 
 #### 2 to launch docker with Wordpress via Jenkins Job (shell) on stating Node
 
-  ssh jenkins@178.154.207.107 docker run -d -p 80:80 tutum/wordpress /run.sh
+    ssh jenkins@178.154.207.107 docker run -d -p 80:80 tutum/wordpress /run.sh
 
-#### 3 to ping Production and Stating Nodes via Jenkins Job (shell)
+#### 3 to get Ping DOWN of Production and Stating Nodes via Jenkins Job (shell) every 5 min
   
 ```shell
 ping -c 1 178.154.203.182
@@ -32,6 +32,13 @@ if [ $? -eq 1 ];  then
 fi
 
 ```
+#### 4 to get Production and Stating Nodes via Jenkins Job (shell) every 5 min
+
+
+
+
+
+
 
 ### how to lauch 
 
