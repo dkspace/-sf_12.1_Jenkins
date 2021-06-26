@@ -38,7 +38,7 @@ fi
 sh '''ssh jenkins@178.154.203.182 uptime >> /home/jenkins/statingUTime.log
 ssh jenkins@178.154.207.107 uptime >> /home/jenkins/productionUTime.log'''
 ```
-also via pipeline file 
+also via pipeline file  (12.6)
 
 ```shell
 pipeline {
@@ -74,7 +74,7 @@ pipeline {
 
 ```
 
-#### 5.   to reboot Production or Stating or both Nodes via Jenkins Pipeline
+#### 5.   to reboot Production or Stating or both Nodes via Jenkins Pipeline (12.6)
 
 ```shell
 pipeline {
