@@ -32,12 +32,12 @@ if [ $? -eq 1 ];  then
 fi
 
 ```
-#### 4 to get Production and Stating Nodes via Jenkins Job (shell) every 5 min
+#### 4 to get UPtime from Production and Stating Nodes via Jenkins Job (shell) every 5 min
 
-
-
-
-
+```shell
+sh '''ssh jenkins@178.154.203.182 uptime >> /home/jenkins/statingUTime.log
+ssh jenkins@178.154.207.107 uptime >> /home/jenkins/productionUTime.log'''
+```
 
 
 ### how to lauch 
